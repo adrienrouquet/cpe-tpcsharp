@@ -12,14 +12,14 @@ namespace MediaCenter
         private Int32 _ID = ++_nextID;
         private String _name;
         private String _path;
-        private long _size;
+        private String _size;
         private Int32 _rating;
 
         public Media()
         {
         }
 
-        public Media(String name, String path, long size, Int32 rating)
+        public Media(String name, String path, String size, Int32 rating)
         {
             this._name = name;
             this._path = path;
@@ -54,11 +54,11 @@ namespace MediaCenter
             return this._path;
         }
 
-        public void SetSize(long size)
+        public void SetSize(String size)
         {
             this._size = size;
         }
-        public long GetSize()
+        public String GetSize()
         {
             return this._size;
         }

@@ -7,13 +7,11 @@ namespace MediaCenter
 {
     class Audio : Media
     {
-        public enum AudioType{ wav, mp3, aac, wma, m4a, ogg, flac }
-
-        private AudioType _audioType;
+        private String _audioType;
 
         public Audio() { }
 
-        public Audio(String name, String path, long size, Int32 rating, AudioType audioType)
+        public Audio(String name, String path, String size, Int32 rating, String audioType)
             : base(name, path, size, rating)
         {
             this._audioType = audioType;

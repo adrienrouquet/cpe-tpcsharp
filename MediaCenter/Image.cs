@@ -7,6 +7,8 @@ namespace MediaCenter
 {
     class Image : Media
     {
-
+        public Image(String name, String path, String size, Int32 rating) : base(name, path, size, rating)
+        {
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace MediaCenter
 
         public Video() { }
 
-        public Video(String name, String path, long size, Int32 rating, Boolean HD) : base(name, path, size, rating)
+        public Video(String name, String path, String size, Int32 rating, Boolean HD) : base(name, path, size, rating)
         {
             this._HD = HD;
         }

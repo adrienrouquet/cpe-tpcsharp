@@ -22,8 +22,8 @@ namespace MediaCenter
     public partial class MediaWindow : Window
     {
         private Boolean _edit = false;
-        enum MediaType {Img,Audio,Video};
-        private MediaType _mediaType = null;
+        enum MediaType {False,Image,Audio,Video};
+        private MediaType _mediaType = MediaType.False;
 
         //In case we clicked on Add Media (Which means we are displaying the new media Window)
         public MediaWindow()
@@ -55,11 +55,16 @@ namespace MediaCenter
                 MediaVideoQualityLabel.IsEnabled = true;
                 MediaVideoQuality.IsEnabled = true;
                 MediaVideoQuality.IsChecked = ((Video)(editMedia)).IsHD();
+                _mediaType = MediaType.Video;
             }
             else if (editMedia.GetType().Name.Equals("Audio"))
             {
-
                 MediaAudioType.Text = ((Audio)(editMedia)).GetAudioType().ToString();
+                _mediaType = MediaType.Audio;
+            }
+            else if (editMedia.GetType().Name.Equals("Image"))
+            {
+                _mediaType = MediaType.Image;
             }
             _edit = true;
         }
@@ -91,6 +96,7 @@ namespace MediaCenter
                     MediaVideoQualityLabel.Visibility   = System.Windows.Visibility.Visible;
                     MediaVideoQuality.IsChecked         = false;
                     valid = true;
+                    _mediaType = MediaType.Video;
                 }
                 //Is it an audio file?
                 if (validAudioExt.Exists(delegate(String ext) { return (ext == info.Extension); }))
@@ -99,11 +105,13 @@ namespace MediaCenter
                     MediaAudioTypeLabel.Visibility      = System.Windows.Visibility.Visible;
                     MediaAudioType.Visibility           = System.Windows.Visibility.Visible;
                     valid = true;
+                    _mediaType = MediaType.Audio;
                 }
                 //Is it an image file?
                 if (validImageExt.Exists(delegate(String ext) { return (ext == info.Extension); }))
                 {
                     valid = true;
+                    _mediaType = MediaType.Image;
                 }
                 
                 //If we have a valid file, we can fill both path and size.
@@ -119,6 +127,7 @@ namespace MediaCenter
 
         private void ClearFields()
         {
+            _mediaType = MediaType.False;
             MediaVideoQualityLabel.IsEnabled = false;
             MediaVideoQuality.IsEnabled = false;
             MediaVideoQualityLabel.Visibility = System.Windows.Visibility.Hidden;
@@ -143,16 +152,29 @@ namespace MediaCenter
         private void Submit_Click(object sender, RoutedEventArgs e) 
         {
             MCDatabase MCDB = new MCDatabase();
+
+            Media FinalMedia = null;
+
+            if (_mediaType == MediaType.Video)
+            {
+                FinalMedia = new Video((String) MediaName.Text, (String) MediaPath.Text, (String) MediaSize.Text, (Int32) MediaRating.Value, (Boolean) MediaVideoQuality.IsChecked);
+            }
+            else if (_mediaType == MediaType.Audio)
+            {
+                FinalMedia = new Audio((String) MediaName.Text, (String)MediaPath.Text, (String)MediaSize.Text, (Int32)MediaRating.Value, (String) MediaAudioType.Text);
+            }
+            else if (_mediaType == MediaType.Image)
+            {
+                FinalMedia = new Image((String)MediaName.Text, (String)MediaPath.Text, (String)MediaSize.Text, (Int32)MediaRating.Value);
+            }
+
             
-
-
-            Media FinalMedia = new Media();
             //ICI ON REMPLIT LE MEDIA AVEC LES VALEURS DU FORM
 
             if (_edit)
             {
-                
-                MCDB.UpdateMedia(FinalMedia.GetID(), FinalMedia);
+                FinalMedia.SetID((Int32.Parse(MediaID.Text));
+                MCDB.UpdateMedia(FinalMedia);
             }
             else
             {
