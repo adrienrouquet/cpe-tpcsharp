@@ -11,8 +11,8 @@ namespace MediaCenter
 {
     class MCDatabase
     {
-        private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
-        //private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\";
+        //private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
+        private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\";
 
         private String _DBFileName = @"DB.txt";
         private static DataSet _MCDB = null;
@@ -72,14 +72,41 @@ namespace MediaCenter
             return _MCView;
         }
         
-        public void UpdateMedia(int ID, Media FinalMedia)
+        public void UpdateMedia(Media FinalMedia)
         {
 
         }
 
         public void AddMedia(Media FinalMedia)
         {
+            DataTable table = _MCDB.Tables["csv"];
 
+            //switch (FinalMedia.GetType().Name)
+            //{
+            //    case "Video":
+            //        Video media = (Video)FinalMedia;
+            //        break;
+            //    case "Audio":
+            //        Audio media = (Audio)FinalMedia;
+            //        break;
+            //    case "Image":
+            //        Image media = (Image)FinalMedia;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            
+
+            DataRow DT = table.NewRow();
+            //DT["ID"] = media.GetID();
+            //DT["TypeID"] = media.GetType().Name;
+            //DT["Name"] = media.GetName();
+            //DT["Path"] = media.GetID();
+            //DT["Size"] = media.GetID();
+            //DT["Rating"] = media.GetID();
+            //DT["AudioType"] = media.GetID();
+            //DT["IsHD"] = media.GetID();
+            table.Rows.Add(DT);
         }
     }
 }
