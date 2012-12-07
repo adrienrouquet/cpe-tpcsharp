@@ -31,3 +31,5 @@ C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\GeneratedInte
 C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter_MarkupCompile.lref
 C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\DebugWindow.baml
 C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\DebugWindow.g.cs
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.exe
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.pdb
