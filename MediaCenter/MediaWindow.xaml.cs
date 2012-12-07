@@ -173,7 +173,7 @@ namespace MediaCenter
 
             if (_edit)
             {
-                FinalMedia.SetID((Int32.Parse(MediaID.Text));
+                FinalMedia.SetID(Int32.Parse(MediaID.Text));
                 MCDB.UpdateMedia(FinalMedia);
             }
             else

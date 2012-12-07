@@ -17,12 +17,12 @@ namespace MediaCenter
             this._audioType = audioType;
         }
 
-        public void SetAudioType(AudioType audioType)
+        public void SetAudioType(String audioType)
         {
             this._audioType = audioType;
         }
 
-        public AudioType GetAudioType()
+        public String GetAudioType()
         {
             return this._audioType;
         }
