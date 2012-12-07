@@ -11,9 +11,8 @@ namespace MediaCenter
 {
     class MCDatabase
     {
-        private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
-        //private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\";
-
+        //Getting out of bin/release
+        private String _DBPath ="..\\..\\";
         private String _DBFileName = @"DB.txt";
         private static DataSet _MCDB = null;
         private static GridView _MCView = null;
@@ -136,7 +135,7 @@ namespace MediaCenter
 
         public void UnloadDB()
         {
-            CreateCSVFile(_MCDB.Tables["csv"], _DBPath);
+            CreateCSVFile(_MCDB.Tables["csv"], _DBPath+_DBFileName);
         }
 
         public void CreateCSVFile(DataTable dt, string strFilePath)
@@ -149,7 +148,7 @@ namespace MediaCenter
 
             for (int i = 0; i < iColCount; i++)
             {
-                sw.Write(dt.Columns[i]);
+                sw.Write("\"" + dt.Columns[i] + "\"");
                 if (i < iColCount - 1)
                 {
                     sw.Write(",");
@@ -164,7 +163,7 @@ namespace MediaCenter
                 {
                     if (!Convert.IsDBNull(dr[i]))
                     {
-                        sw.Write(dr[i].ToString());
+                        sw.Write("\"" + dr[i].ToString() + "\"");
                     }
 
                     if (i < iColCount - 1)

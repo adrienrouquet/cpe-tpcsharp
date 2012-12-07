@@ -27,14 +27,6 @@ namespace MediaCenter
             InitializeComponent();
             _MCDB = new MCDatabase();
             
-            Debug debug = new Debug();
-            debug.Show("TEST CONSTRUCTEUR");
-            //foreach (DataRow dr in _MCDB.GetDB().Tables["csv"].Rows)
-            //{
-            //    debug.Show(dr["name"].ToString());
-            //}
-            //debug.Show();
-            //debug.Hide();
             this.MainDataGrid.AutoGenerateColumns = true;
 
             DataTable DTCSV = _MCDB.GetDB().Tables["csv"];
@@ -49,6 +41,16 @@ namespace MediaCenter
             this.MainDataGrid.DataContext = DTCSV.DefaultView;
             this.MainDataGrid.UpdateLayout();
         }
+
+        private void Window_Closing(object sender, EventArgs e)
+        {
+            Window w = sender as Window;
+            _MCDB.UnloadDB();
+
+            if (w == null)
+                return;
+        }
+
 
         private void AddMedia_Click(object sender, RoutedEventArgs e)
         {
@@ -94,6 +96,7 @@ namespace MediaCenter
         {
             _MCDB.DeleteMedia(Int32.Parse((String)((DataRowView)GetSelectedRow().DataContext).Row["ID"]));
         }
+
 
         private void MainDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

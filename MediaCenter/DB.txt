@@ -1,5 +1,5 @@
-﻿id, type, name, path, size, rating, audioType, isHD;
-"1","Audio","test","./2.mp3","2.55 MB","5", ".mp3", "";
-"2","Video","test2","./2.avi","256 MB","3", "", "true";
-"3","Image","test3","./3.jpg","1 MB","4", "", "";
-"78","Image","test4","./4.jpg","2 MB","2", "", "";
+"ID","Type","Name","Path","Size","Rating","AudioType","IsHD"
+"1","Audio","test","./2.mp3","2.55 MB","5",".mp3",
+"2","Video","test2sd","./2.avi","256 MB","4",,"True"
+"3","Image","test3","./3.jpg","1 MB","4",,
+"78","Image","test4","./4.jpg","2 MB","2",,
