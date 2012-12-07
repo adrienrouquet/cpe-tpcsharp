@@ -94,8 +94,6 @@ namespace MediaCenter
             {
                 DR["AudioType"] = ((Audio)FinalMedia).GetAudioType();
             }
-
-            table.Rows.Add(DR);
         }
 
         public void AddMedia(Media FinalMedia)
@@ -121,6 +119,17 @@ namespace MediaCenter
             }
             
             table.Rows.Add(DR);
+        }
+
+        public void DeleteMedia(Media FinalMedia)
+        {
+            DataTable table = _MCDB.Tables["csv"];
+
+            DataRow[] foundRows;
+            foundRows = table.Select("ID = " + FinalMedia.GetID().ToString());
+            DataRow DR = foundRows[0];
+
+            table.Rows.Remove(DR);
         }
     }
 }
