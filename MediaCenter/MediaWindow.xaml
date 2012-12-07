@@ -30,7 +30,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="140,200,0,0" Name="MediaAudioType" VerticalAlignment="Top" Width="90" IsEnabled="False" Visibility="Hidden" />
 
 
-        <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="40,240,0,0" Name="Submit" VerticalAlignment="Top" Width="100" Click="Submit_Click" />
+        <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="40,240,0,0" Name="Submit" VerticalAlignment="Top" Width="100" Click="Submit_Click" IsEnabled="False"/>
         <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="150,240,0,0" Name="Cancel" VerticalAlignment="Top" Width="100" Click="Cancel_Click" />
         
     </Grid>

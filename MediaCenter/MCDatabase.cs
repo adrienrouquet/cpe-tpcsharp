@@ -11,8 +11,8 @@ namespace MediaCenter
 {
     class MCDatabase
     {
-        //private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
-        private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\";
+        private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
+        //private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\";
 
         private String _DBFileName = @"DB.txt";
         private static DataSet _MCDB = null;
@@ -82,7 +82,8 @@ namespace MediaCenter
             DataTable table = _MCDB.Tables["csv"];
 
             DataRow DT = table.NewRow();
-            DT["ID"] = Int32.Parse(((String) table.Compute("Max(ID)", String.Empty)));
+
+            DT["ID"] = Int32.Parse(((String) table.Compute("Max(ID)", String.Empty))) + 1;
             DT["Type"] = FinalMedia.GetType().Name;
             DT["Name"] = FinalMedia.GetName();
             DT["Path"] = FinalMedia.GetPath();
