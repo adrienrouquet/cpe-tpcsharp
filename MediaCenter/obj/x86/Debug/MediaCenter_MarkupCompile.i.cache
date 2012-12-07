@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\
 MediaCenter
 none
 false
 DEBUG;TRACE
-C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\App.xaml
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\App.xaml
 3-272100339
 
-151967247654
+15-1768795866
 12-1381780322
 DebugWindow.xaml;MainWindow.xaml;MediaWindow.xaml;
 
-False
+True
 
