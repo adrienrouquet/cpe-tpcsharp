@@ -34,20 +34,20 @@ namespace MediaCenter
         }
 
         //This is the constructor called in case of a Media Edit, meaning we need to fill the contents
-        public MediaWindow(Media media)
+        public MediaWindow(Media editMedia)
         {
             InitializeComponent();
             MediaLabel.Content = "Edit Media";
             Submit.Content = "Save";
-            Media editMedia = new Media();
-            
+            Submit.IsEnabled = true;
+
             MediaIDLabel.Visibility = System.Windows.Visibility.Visible;
             MediaID.Text = editMedia.GetID().ToString();
             MediaID.Visibility = System.Windows.Visibility.Visible;
             
             MediaName.Text      = editMedia.GetName();
             MediaPath.Text      = editMedia.GetPath();
-            MediaSize.Text      = editMedia.GetSize().ToString();
+            MediaSize.Text      = editMedia.GetSize();
             MediaRating.Value   = editMedia.GetRating();
             
             if (editMedia.GetType().Name.Equals("Video"))
