@@ -82,7 +82,7 @@ namespace MediaCenter
             DataTable table = _MCDB.Tables["csv"];
 
             DataRow DT = table.NewRow();
-            DT["ID"] = Int32.Parse(((String) table.Compute("Max(ID)", String.Empty)));
+            DT["ID"] = Int32.Parse(((String) table.Compute("Max(ID)", String.Empty))) + 1;
             DT["TypeID"] = FinalMedia.GetType().Name;
             DT["Name"] = FinalMedia.GetName();
             DT["Path"] = FinalMedia.GetPath();
