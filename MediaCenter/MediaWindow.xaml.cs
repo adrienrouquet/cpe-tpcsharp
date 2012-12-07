@@ -119,6 +119,7 @@ namespace MediaCenter
                 {
                     MediaPath.Text = ofd.FileName;
                     MediaSize.Text = info.Length.ToFileSize();
+                    Submit.IsEnabled = true;
                 }
                 
             }
@@ -135,6 +136,7 @@ namespace MediaCenter
             MediaAudioType.Text = "";
             MediaAudioType.Visibility = System.Windows.Visibility.Hidden;
             MediaAudioTypeLabel.Visibility = System.Windows.Visibility.Hidden;
+            Submit.IsEnabled = false;
         }
 
         //Event Handler: Change on MediaRating
@@ -170,6 +172,14 @@ namespace MediaCenter
 
             
             //ICI ON REMPLIT LE MEDIA AVEC LES VALEURS DU FORM
+
+            DebugWindow debug = new DebugWindow();
+            debug.Show("TEST");
+            debug.Show(FinalMedia.GetType().Name.ToString());
+            debug.Show(FinalMedia.GetName());
+            debug.Show(FinalMedia.GetPath());
+            debug.Show(FinalMedia.GetRating().ToString());
+            debug.Show();
 
             if (_edit)
             {
