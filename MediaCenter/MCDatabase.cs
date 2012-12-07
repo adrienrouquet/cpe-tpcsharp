@@ -11,8 +11,8 @@ namespace MediaCenter
 {
     class MCDatabase
     {
-        private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
-        //private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\";
+        //private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
+        private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\";
 
         private String _DBFileName = @"DB.txt";
         private static DataSet _MCDB = null;
@@ -74,32 +74,53 @@ namespace MediaCenter
         
         public void UpdateMedia(Media FinalMedia)
         {
+            DataTable table = _MCDB.Tables["csv"];
 
+            DataRow[] foundRows;
+            foundRows = table.Select("ID = " + FinalMedia.GetID().ToString());
+            DataRow DR = foundRows[0];
+            
+            DR["Type"] = FinalMedia.GetType().Name;
+            DR["Name"] = FinalMedia.GetName();
+            DR["Path"] = FinalMedia.GetPath();
+            DR["Size"] = FinalMedia.GetSize();
+            DR["Rating"] = FinalMedia.GetRating();
+
+            if (FinalMedia.GetType().Name.Equals("Video"))
+            {
+                DR["IsHD"] = ((Video)FinalMedia).IsHD();
+            }
+            if (FinalMedia.GetType().Name.Equals("Audio"))
+            {
+                DR["AudioType"] = ((Audio)FinalMedia).GetAudioType();
+            }
+
+            table.Rows.Add(DR);
         }
 
         public void AddMedia(Media FinalMedia)
         {
             DataTable table = _MCDB.Tables["csv"];
 
-            DataRow DT = table.NewRow();
+            DataRow DR = table.NewRow();
 
-            DT["ID"] = Int32.Parse(((String) table.Compute("Max(ID)", String.Empty))) + 1;
-            DT["Type"] = FinalMedia.GetType().Name;
-            DT["Name"] = FinalMedia.GetName();
-            DT["Path"] = FinalMedia.GetPath();
-            DT["Size"] = FinalMedia.GetSize();
-            DT["Rating"] = FinalMedia.GetRating();
+            DR["ID"] = Int32.Parse(((String) table.Compute("Max(ID)", String.Empty))) + 1;
+            DR["Type"] = FinalMedia.GetType().Name;
+            DR["Name"] = FinalMedia.GetName();
+            DR["Path"] = FinalMedia.GetPath();
+            DR["Size"] = FinalMedia.GetSize();
+            DR["Rating"] = FinalMedia.GetRating();
             
             if (FinalMedia.GetType().Name.Equals("Video"))
             {
-                DT["IsHD"] = ((Video) FinalMedia).IsHD();
+                DR["IsHD"] = ((Video) FinalMedia).IsHD();
             }
             if (FinalMedia.GetType().Name.Equals("Audio"))
             {
-                DT["AudioType"] = ((Audio) FinalMedia).GetAudioType();
+                DR["AudioType"] = ((Audio) FinalMedia).GetAudioType();
             }
             
-            table.Rows.Add(DT);
+            table.Rows.Add(DR);
         }
     }
 }
