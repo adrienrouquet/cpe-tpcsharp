@@ -74,11 +74,13 @@ namespace MediaCenter
                 List<String> validVideoExt = new List<String> {".avi", ".mpg", ".mov"};
                 List<String> validAudioExt = new List<String> {".aac", ".wma", ".m4a", ".ogg", ".flac", ".wav", ".mp3"};
                 List<String> validImageExt = new List<String> {".jpg", ".gif", ".png"};
-                
+
+                //Clearing previous fields
+                ClearFields();
+
                 //Is it a video file?
                 if (validVideoExt.Exists(delegate(String ext) { return (ext == info.Extension); }))
                 {
-                    
                     MediaVideoQualityLabel.IsEnabled    = true;
                     MediaVideoQuality.IsEnabled         = true;
                     MediaVideoQuality.Visibility        = System.Windows.Visibility.Visible;
@@ -111,6 +113,16 @@ namespace MediaCenter
             ofd = null;
         }
 
+        private void ClearFields()
+        {
+            MediaVideoQualityLabel.IsEnabled = false;
+            MediaVideoQuality.IsEnabled = false;
+            MediaVideoQualityLabel.Visibility = System.Windows.Visibility.Hidden;
+            MediaVideoQuality.Visibility = System.Windows.Visibility.Hidden;
+            MediaAudioType.Text = "";
+            MediaAudioType.Visibility = System.Windows.Visibility.Hidden;
+            MediaAudioTypeLabel.Visibility = System.Windows.Visibility.Hidden;
+        }
         //Event Handler: Change on MediaRating
         private void MediaRating_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
