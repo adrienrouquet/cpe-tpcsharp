@@ -15,12 +15,16 @@ using System.IO;
 
 namespace MediaCenter
 {
+
     /// <summary>
     /// Interaction logic for MediaWindow.xaml
     /// </summary>
     public partial class MediaWindow : Window
     {
-        Boolean _edit = false;
+        private Boolean _edit = false;
+        enum MediaType {Img,Audio,Video};
+        private MediaType _mediaType = null;
+
         //In case we clicked on Add Media (Which means we are displaying the new media Window)
         public MediaWindow()
         {
@@ -123,6 +127,7 @@ namespace MediaCenter
             MediaAudioType.Visibility = System.Windows.Visibility.Hidden;
             MediaAudioTypeLabel.Visibility = System.Windows.Visibility.Hidden;
         }
+
         //Event Handler: Change on MediaRating
         private void MediaRating_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -138,11 +143,15 @@ namespace MediaCenter
         private void Submit_Click(object sender, RoutedEventArgs e) 
         {
             MCDatabase MCDB = new MCDatabase();
+            
+
+
             Media FinalMedia = new Media();
             //ICI ON REMPLIT LE MEDIA AVEC LES VALEURS DU FORM
 
             if (_edit)
             {
+                
                 MCDB.UpdateMedia(FinalMedia.GetID(), FinalMedia);
             }
             else
