@@ -59,23 +59,61 @@ namespace MediaCenter
 
         private void EditMedia_Click(object sender, RoutedEventArgs e)
         {
-            MediaWindow mediaWindow = new MediaWindow(_selectedMedia);
-            mediaWindow.ShowDialog();
+            DataRow selectedRow = ((DataRowView)GetSelectedRow().DataContext).Row;
+            Boolean valid = false;
+            if (((String)selectedRow["Type"]).Equals("Video"))
+            {
+                _selectedMedia = new Video((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]), (((String)selectedRow["IsHD"]).Equals("true")));
+                valid = true;
+            }
+            else if (((String)selectedRow["Type"]).Equals("Audio"))
+            {
+                _selectedMedia = new Audio((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]), (String)selectedRow["AudioType"]);
+                valid = true;
+            }
+            else if (((String)selectedRow["Type"]).Equals("Image"))
+            {
+                _selectedMedia = new Image((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]));
+                valid = true;
+            }
+
+            if (valid)
+            {
+                _selectedMedia.SetID(Int32.Parse((String)selectedRow["ID"]));
+
+                Debug debug = new Debug();
+                debug.Show("APPEL EDITMEDIA AVEC ID" + _selectedMedia.GetID());
+
+                MediaWindow mediaWindow = new MediaWindow(_selectedMedia);
+                mediaWindow.ShowDialog();
+            }
+             
+        }
+
+        private void DeleteMedia_Click(object sender, RoutedEventArgs e)
+        {
+            _MCDB.DeleteMedia(Int32.Parse((String)((DataRowView)GetSelectedRow().DataContext).Row["ID"]));
         }
 
         private void MainDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DataGridRow selectedRow = GetSelectedRow();
-            Debug debug = new Debug();
-            debug.Show("TEST");
-            debug.Show("SelectedRow");
-            debug.Show(selectedRow.GetValue());
+            if (GetSelectedRow() != null)
+            {
+                EditMedia.IsEnabled = true;
+                DeleteMedia.IsEnabled = true;
+            }
+            else
+            {
+                EditMedia.IsEnabled = false;
+                DeleteMedia.IsEnabled = false;
+            }
         }
         
         private DataGridRow GetSelectedRow()
         {
             return (DataGridRow)MainDataGrid.ItemContainerGenerator.ContainerFromItem(MainDataGrid.SelectedItem);
         }
+
 
 
     }

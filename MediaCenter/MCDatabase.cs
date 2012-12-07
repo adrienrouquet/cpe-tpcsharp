@@ -11,8 +11,8 @@ namespace MediaCenter
 {
     class MCDatabase
     {
-        //private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
-        private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\";
+        private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenterGit\MediaCenter\";
+        //private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\";
 
         private String _DBFileName = @"DB.txt";
         private static DataSet _MCDB = null;
@@ -85,6 +85,8 @@ namespace MediaCenter
             DR["Path"] = FinalMedia.GetPath();
             DR["Size"] = FinalMedia.GetSize();
             DR["Rating"] = FinalMedia.GetRating();
+            DR["AudioType"] = "";
+            DR["IsHD"] = "";
 
             if (FinalMedia.GetType().Name.Equals("Video"))
             {
@@ -121,12 +123,12 @@ namespace MediaCenter
             table.Rows.Add(DR);
         }
 
-        public void DeleteMedia(Media FinalMedia)
+        public void DeleteMedia(int ID)
         {
             DataTable table = _MCDB.Tables["csv"];
 
             DataRow[] foundRows;
-            foundRows = table.Select("ID = " + FinalMedia.GetID().ToString());
+            foundRows = table.Select("ID = " + ID.ToString());
             DataRow DR = foundRows[0];
 
             table.Rows.Remove(DR);
