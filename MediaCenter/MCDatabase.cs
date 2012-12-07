@@ -83,7 +83,7 @@ namespace MediaCenter
 
             DataRow DT = table.NewRow();
             DT["ID"] = Int32.Parse(((String) table.Compute("Max(ID)", String.Empty)));
-            DT["TypeID"] = FinalMedia.GetType().Name;
+            DT["Type"] = FinalMedia.GetType().Name;
             DT["Name"] = FinalMedia.GetName();
             DT["Path"] = FinalMedia.GetPath();
             DT["Size"] = FinalMedia.GetSize();
