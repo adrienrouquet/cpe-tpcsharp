@@ -8,7 +8,7 @@
         <Menu Height="40" HorizontalAlignment="Stretch" x:Name="menu1" VerticalAlignment="Top" Margin="0,97,0,0">
             <Button Content="Add Media" x:Name="AddMedia" Click="AddMedia_Click" />
             <Button Content="Edit Media" x:Name="EditMedia" Click="EditMedia_Click" IsEnabled="False"/>
-            <Button Content="Delete Media" x:Name="DeleteMedia" IsEnabled="False"/>
+            <Button Content="Delete Media" x:Name="DeleteMedia" IsEnabled="False" Click="DeleteMedia_Click"/>
         </Menu>
         <DataGrid x:Name="MainDataGrid" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="586" Width="996" ItemsSource="{Binding}" SelectionMode="Single" SelectionChanged="MainDataGrid_SelectionChanged"/>
         <!--<ListView x:Name="ListView" HorizontalAlignment="Left" Height="586" Margin="10,142,0,0" VerticalAlignment="Top" Width="996">

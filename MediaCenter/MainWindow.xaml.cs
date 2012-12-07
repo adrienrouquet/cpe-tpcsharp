@@ -90,18 +90,30 @@ namespace MediaCenter
              
         }
 
+        private void DeleteMedia_Click(object sender, RoutedEventArgs e)
+        {
+            _MCDB.DeleteMedia(Int32.Parse((String)((DataRowView)GetSelectedRow().DataContext).Row["ID"]));
+        }
+
         private void MainDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            EditMedia.IsEnabled = true;
-            DeleteMedia.IsEnabled = true;
-            Debug debug = new Debug();
-            debug.Show((String)((DataRowView)GetSelectedRow().DataContext).Row["ID"]);
+            if (GetSelectedRow() != null)
+            {
+                EditMedia.IsEnabled = true;
+                DeleteMedia.IsEnabled = true;
+            }
+            else
+            {
+                EditMedia.IsEnabled = false;
+                DeleteMedia.IsEnabled = false;
+            }
         }
         
         private DataGridRow GetSelectedRow()
         {
             return (DataGridRow)MainDataGrid.ItemContainerGenerator.ContainerFromItem(MainDataGrid.SelectedItem);
         }
+
 
 
     }

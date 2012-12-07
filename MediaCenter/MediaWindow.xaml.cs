@@ -171,8 +171,6 @@ namespace MediaCenter
             }
 
             
-            //ICI ON REMPLIT LE MEDIA AVEC LES VALEURS DU FORM
-
             Debug debug = new Debug();
             debug.Show("TEST");
             debug.Show(FinalMedia.GetType().Name.ToString());
@@ -184,10 +182,12 @@ namespace MediaCenter
             {
                 FinalMedia.SetID(Int32.Parse(MediaID.Text));
                 MCDB.UpdateMedia(FinalMedia);
+                this.Close();
             }
             else
             {
                 MCDB.AddMedia(FinalMedia);
+                this.Close();
             }
         }
     }
