@@ -16,3 +16,5 @@ C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Release\MediaCenter
 C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Release\DebugWindow.baml
 C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Release\DebugWindow.g.cs
 C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Release\MediaCenter.csprojResolveAssemblyReference.cache
+C:\Users\Loic\Desktop\csharp\mediacentergit\MediaCenter\obj\x86\Release\MediaCenter.exe
+C:\Users\Loic\Desktop\csharp\mediacentergit\MediaCenter\obj\x86\Release\MediaCenter.pdb

@@ -11,7 +11,9 @@ namespace MediaCenter
 {
     class MCDatabase
     {
-        private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\";
+        private String _DBPath = @"C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenterGit\";
+        //private String _DBPath = @"D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\";
+
         private String _DBFileName = @"DB.txt";
         private static DataSet _MCDB = null;
         private static GridView _MCView = null;
