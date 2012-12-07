@@ -26,9 +26,9 @@ namespace MediaCenter
         {
             InitializeComponent();
             _MCDB = new MCDatabase();
-            DebugWindow debug = new DebugWindow();
-
-            //debug.Show("TEST");
+            
+            Debug debug = new Debug();
+            debug.Show("TEST CONSTRUCTEUR");
             //foreach (DataRow dr in _MCDB.GetDB().Tables["csv"].Rows)
             //{
             //    debug.Show(dr["name"].ToString());
@@ -39,7 +39,7 @@ namespace MediaCenter
 
             DataTable DTCSV = _MCDB.GetDB().Tables["csv"];
             DTCSV.Columns[0].ColumnName = "ID";
-            DTCSV.Columns[1].ColumnName = "TypeID";
+            DTCSV.Columns[1].ColumnName = "Type";
             DTCSV.Columns[2].ColumnName = "Name";
             DTCSV.Columns[3].ColumnName = "Path";
             DTCSV.Columns[4].ColumnName = "Size";
@@ -63,6 +63,19 @@ namespace MediaCenter
             mediaWindow.ShowDialog();
         }
 
+        private void MainDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataGridRow selectedRow = GetSelectedRow();
+            Debug debug = new Debug();
+            debug.Show("TEST");
+            debug.Show("SelectedRow");
+            debug.Show(selectedRow.GetValue());
+        }
+        
+        private DataGridRow GetSelectedRow()
+        {
+            return (DataGridRow)MainDataGrid.ItemContainerGenerator.ContainerFromItem(MainDataGrid.SelectedItem);
+        }
 
 
     }

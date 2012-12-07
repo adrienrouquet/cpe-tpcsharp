@@ -173,13 +173,12 @@ namespace MediaCenter
             
             //ICI ON REMPLIT LE MEDIA AVEC LES VALEURS DU FORM
 
-            DebugWindow debug = new DebugWindow();
+            Debug debug = new Debug();
             debug.Show("TEST");
             debug.Show(FinalMedia.GetType().Name.ToString());
             debug.Show(FinalMedia.GetName());
             debug.Show(FinalMedia.GetPath());
             debug.Show(FinalMedia.GetRating().ToString());
-            debug.Show();
 
             if (_edit)
             {
