@@ -1,0 +1,33 @@
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MainWindow.baml
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MediaWindow.baml
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MainWindow.g.cs
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MediaWindow.g.cs
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\App.g.cs
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter_MarkupCompile.cache
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.g.resources
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.Properties.Resources.resources
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\bin\Debug\MediaCenter.exe
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\bin\Debug\MediaCenter.pdb
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.exe
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.pdb
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.exe
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.pdb
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\bin\Debug\MediaCenter.exe
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\bin\Debug\MediaCenter.pdb
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.csprojResolveAssemblyReference.cache
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MainWindow.baml
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaWindow.baml
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaWindow.g.cs
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\App.g.cs
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter_MarkupCompile.cache
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.g.resources
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.Properties.Resources.resources
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter.csproj.GenerateResource.Cache
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\MediaCenter_MarkupCompile.lref
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\DebugWindow.baml
+C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\DebugWindow.g.cs

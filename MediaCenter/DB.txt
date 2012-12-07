@@ -1,0 +1,5 @@
+﻿id, typeID, name, path, size, rating, audioType, isHD;
+"1","2","test","./2.mp3","2.55 MB","5", ".mp3", "";
+"2","3","test2","./2.avi","256 MB","3", "", "true";
+"3","1","test3","./3.jpg","1 MB","4", "", "";
+"78","1","test4","./4.jpg","2 MB","2", "", "";
