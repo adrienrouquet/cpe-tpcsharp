@@ -81,31 +81,23 @@ namespace MediaCenter
         {
             DataTable table = _MCDB.Tables["csv"];
 
-            //switch (FinalMedia.GetType().Name)
-            //{
-            //    case "Video":
-            //        Video media = (Video)FinalMedia;
-            //        break;
-            //    case "Audio":
-            //        Audio media = (Audio)FinalMedia;
-            //        break;
-            //    case "Image":
-            //        Image media = (Image)FinalMedia;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            
-
             DataRow DT = table.NewRow();
-            //DT["ID"] = media.GetID();
-            //DT["TypeID"] = media.GetType().Name;
-            //DT["Name"] = media.GetName();
-            //DT["Path"] = media.GetID();
-            //DT["Size"] = media.GetID();
-            //DT["Rating"] = media.GetID();
-            //DT["AudioType"] = media.GetID();
-            //DT["IsHD"] = media.GetID();
+            DT["ID"] = FinalMedia.GetID();
+            DT["TypeID"] = FinalMedia.GetType().Name;
+            DT["Name"] = FinalMedia.GetName();
+            DT["Path"] = FinalMedia.GetPath();
+            DT["Size"] = FinalMedia.GetSize();
+            DT["Rating"] = FinalMedia.GetRating();
+            
+            if (FinalMedia.GetType().Name.Equals("Video"))
+            {
+                DT["IsHD"] = ((Video) FinalMedia).IsHD();
+            }
+            if (FinalMedia.GetType().Name.Equals("Audio"))
+            {
+                DT["AudioType"] = ((Audio) FinalMedia).GetAudioType();
+            }
+            
             table.Rows.Add(DT);
         }
     }
