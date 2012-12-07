@@ -33,3 +33,18 @@ C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\DebugWindow.b
 C:\Users\Loic\Desktop\Csharp\MediaCenter\MediaCenter\obj\x86\Debug\DebugWindow.g.cs
 D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.exe
 D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.pdb
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.csprojResolveAssemblyReference.cache
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\DebugWindow.baml
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaWindow.baml
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\DebugWindow.g.cs
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MainWindow.g.cs
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaWindow.g.cs
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\App.g.cs
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter_MarkupCompile.cache
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter_MarkupCompile.lref
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\bin\Debug\MediaCenter.exe
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\bin\Debug\MediaCenter.pdb
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MainWindow.baml
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.g.resources
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.Properties.Resources.resources
+D:\Users\Adrien\Documents\Visual Studio 2012\Projects\cpe-tpcsharp\MediaCenter\obj\x86\Debug\MediaCenter.csproj.GenerateResource.Cache
