@@ -26,8 +26,6 @@ namespace MediaCenter
         public void Show(String str)
         {
             WindowBox.Text += str + "\n";
-            if(!this.ShowActivated)
-                this.Show();
         }
     }
 }

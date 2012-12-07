@@ -10,7 +10,7 @@
             <Button Content="Edit Media" x:Name="EditMedia" Click="EditMedia_Click" />
             <Button Content="Delete Media" x:Name="DeleteMedia" />
         </Menu>
-        <DataGrid x:Name="MainDataGrid" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="586" Width="996" ItemsSource="{Binding}"/>
+        <DataGrid x:Name="MainDataGrid" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="586" Width="996" ItemsSource="{Binding}" SelectionMode="Single" SelectionChanged="MainDataGrid_SelectionChanged"/>
         <!--<ListView x:Name="ListView" HorizontalAlignment="Left" Height="586" Margin="10,142,0,0" VerticalAlignment="Top" Width="996">
             <ListView.View>
                 <GridView AllowsColumnReorder="False">
