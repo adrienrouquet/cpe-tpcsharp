@@ -20,7 +20,7 @@ namespace MediaCenter
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Media _selectedMedia = null;
+        private Media _SelectedMedia = null;
         private MCDatabase _MCDB = null;
         public MainWindow()
         {
@@ -63,28 +63,28 @@ namespace MediaCenter
             Boolean valid = false;
             if (((String)selectedRow["Type"]).Equals("Video"))
             {
-                _selectedMedia = new Video((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]), (((String)selectedRow["IsHD"]).Equals("true")));
+                _SelectedMedia = new Video((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]), (((String)selectedRow["IsHD"]).Equals("true")));
                 valid = true;
             }
             else if (((String)selectedRow["Type"]).Equals("Audio"))
             {
-                _selectedMedia = new Audio((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]), (String)selectedRow["AudioType"]);
+                _SelectedMedia = new Audio((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]), (String)selectedRow["AudioType"]);
                 valid = true;
             }
             else if (((String)selectedRow["Type"]).Equals("Image"))
             {
-                _selectedMedia = new Image((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]));
+                _SelectedMedia = new Image((String)selectedRow["Name"], (String)selectedRow["Path"], (String)selectedRow["Size"], Int32.Parse((String)selectedRow["Rating"]));
                 valid = true;
             }
 
             if (valid)
             {
-                _selectedMedia.SetID(Int32.Parse((String)selectedRow["ID"]));
+                _SelectedMedia.SetID(Int32.Parse((String)selectedRow["ID"]));
 
                 Debug debug = new Debug();
-                debug.Show("APPEL EDITMEDIA AVEC ID" + _selectedMedia.GetID());
+                debug.Show("APPEL EDITMEDIA AVEC ID " + _SelectedMedia.GetID());
 
-                MediaWindow mediaWindow = new MediaWindow(_selectedMedia);
+                MediaWindow mediaWindow = new MediaWindow(_SelectedMedia);
                 mediaWindow.ShowDialog();
             }
              
